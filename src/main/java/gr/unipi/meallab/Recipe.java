@@ -19,6 +19,11 @@ public class Recipe {
     private String instructions;
     @JsonProperty("strMealThumb")
     private String thumbUrl;
+    @JsonProperty("strCategory")
+    private String category;
+    @JsonProperty("strArea")
+    private String area;
+    
 
     // API provides up to 20 individual ingredient fields.
     
@@ -42,6 +47,28 @@ public class Recipe {
     @JsonProperty("strIngredient18") private String i18;
     @JsonProperty("strIngredient19") private String i19;
     @JsonProperty("strIngredient20") private String i20;
+    
+    
+    @JsonProperty("strMeasure1") private String m1;
+    @JsonProperty("strMeasure2") private String m2;
+    @JsonProperty("strMeasure3") private String m3;
+    @JsonProperty("strMeasure4") private String m4;
+    @JsonProperty("strMeasure5") private String m5;
+    @JsonProperty("strMeasure6") private String m6;
+    @JsonProperty("strMeasure7") private String m7;
+    @JsonProperty("strMeasure8") private String m8;
+    @JsonProperty("strMeasure9") private String m9;
+    @JsonProperty("strMeasure10") private String m10;
+    @JsonProperty("strMeasure11") private String m11;
+    @JsonProperty("strMeasure12") private String m12;
+    @JsonProperty("strMeasure13") private String m13;
+    @JsonProperty("strMeasure14") private String m14;
+    @JsonProperty("strMeasure15") private String m15;
+    @JsonProperty("strMeasure16") private String m16;
+    @JsonProperty("strMeasure17") private String m17;
+    @JsonProperty("strMeasure18") private String m18;
+    @JsonProperty("strMeasure19") private String m19;
+    @JsonProperty("strMeasure20") private String m20;
 
     // Getters and Setters for each field
     public String getId() 
@@ -63,6 +90,16 @@ public class Recipe {
     { return thumbUrl; }
     public void setThumbUrl(String thumbUrl) 
     { this.thumbUrl = thumbUrl; }
+    
+    public String getCategory() 
+    { return category; }
+    public void setCategory(String category) 
+    { this.category = category; }
+
+    public String getArea() 
+    { return area; }
+    public void setArea(String area)
+    { this.area = area; }
     
    // Groups the 20 individual ingredients into one static array 
    // so we can display them easily using a loop in the UI.
@@ -92,6 +129,31 @@ public class Recipe {
         ingredients[19] = i20;
         
         return ingredients;
+    }
+    
+    public String[] getMeasuresArray() {
+        String[] measures = new String[20];
+        measures[0] = m1;
+        measures[1] = m2;
+        measures[2] = m3;
+        measures[3] = m4;
+        measures[4] = m5;
+        measures[5] = m6;
+        measures[6] = m7;
+        measures[7] = m8;
+        measures[8] = m9;
+        measures[9] = m10;
+        measures[10] = m11;
+        measures[11] = m12;
+        measures[12] = m13;
+        measures[13] = m14;
+        measures[14] = m15;
+        measures[15] = m16;
+        measures[16] = m17;
+        measures[17] = m18;
+        measures[18] = m19;
+        measures[19] = m20;
+        return measures;
     }
 
 }
