@@ -131,6 +131,8 @@ public class Recipe {
         return ingredients;
     }
     
+    // Groups the 20 ingredients' measurements into one static array 
+    // so we can display them easily using a loop in the UI.
     public String[] getMeasuresArray() {
         String[] measures = new String[20];
         measures[0] = m1;
