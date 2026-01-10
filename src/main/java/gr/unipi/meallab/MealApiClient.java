@@ -91,7 +91,7 @@ public class MealApiClient {
         } catch (Exception e) {
             e.printStackTrace();
         }
-      //Return an empty array in case of exception
+      //Return null in case of exception
         return null;
     }
 }
